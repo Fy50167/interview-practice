@@ -64,7 +64,7 @@ const oneAway = function(str1, str2) {
     return output
 }
 
-console.log(oneAway('pale', 'ple'));
+/* console.log(oneAway('pale', 'ple'));
 console.log(oneAway('pales', 'pale'));
 console.log(oneAway('pale', 'bale'));
-console.log(oneAway('pale', 'bae'));
+console.log(oneAway('pale', 'bae')); */
