@@ -30,6 +30,24 @@ const insertRemove = function(str1, str2) {
     return true
 }
 
-console.log(insertRemove('pale', 'ple'));
+/* console.log(insertRemove('pale', 'ple'));
 console.log(insertRemove('pales', 'pale'));
-console.log(insertRemove('pales', 'pald'));
+console.log(insertRemove('pales', 'pald')); */
+
+const replacement = function(str1, str2) {
+    let marker = false;
+    for (let i = 0; i < str1.length; i++) {
+        if (str1[i] !== str2[i]) {
+            if (marker === false) {
+                marker = true;
+            } else {
+                return false
+            }
+        }
+    }
+    return true
+}
+
+console.log(replacement('pale', 'bale'));
+console.log(replacement('cascade', 'cascadf'));
+console.log(replacement('cascade', 'basbade'));
