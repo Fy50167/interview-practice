@@ -48,6 +48,23 @@ const replacement = function(str1, str2) {
     return true
 }
 
-console.log(replacement('pale', 'bale'));
+/* console.log(replacement('pale', 'bale'));
 console.log(replacement('cascade', 'cascadf'));
-console.log(replacement('cascade', 'basbade'));
+console.log(replacement('cascade', 'basbade')); */
+
+const oneAway = function(str1, str2) {
+    let output = false;
+    if (str1 === str2) {
+        return true
+    } else if (Math.abs(str1.length - str2.length) === 1) {
+        output = insertRemove(str1, str2);
+    } else if (str1.length === str2.length) {
+        output = replacement(str1, str2);
+    }
+    return output
+}
+
+console.log(oneAway('pale', 'ple'));
+console.log(oneAway('pales', 'pale'));
+console.log(oneAway('pale', 'bale'));
+console.log(oneAway('pale', 'bae'));
