@@ -15,14 +15,22 @@ const zeroMatrix = function(matrix) {
         }
     }
     for (const row of hashRows) {    
-        for (let c = 0; c < matrix[0].length; c++) {
-            matrix[row][c] = 0;
-        }
+        zeroRow(matrix, row);
     }
     for (const col of hashColumns) {
-        for (let r = 0; r < matrix.length; r++) {
-            matrix[r][column] = 0;
-        }
+        zeroColumn(matrix, col);
+    }
+    
+};
+
+const zeroRow = function(matrix, row) {
+    for (let c = 0; c < matrix[0].length; c++) {
+        matrix[row][c] = 0;
     }
 }
 
+const zeroColumn = function(matrix, column) {
+    for (let r = 0; r < matrix.length; r++) {
+        matrix[r][column] = 0;
+    }
+}
