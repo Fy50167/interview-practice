@@ -5,6 +5,9 @@ call to isSubstring (e.g., "waterbottle" is a rotation of"erbottlewat").
  */
 
 const stringRotation = function(str1, str2) {
+    if (str1.length !== str2.length) {
+        return false
+    }
     if ((str1 + str1).includes(str2)) {
         return true
     }
