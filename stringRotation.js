@@ -5,7 +5,7 @@ call to isSubstring (e.g., "waterbottle" is a rotation of"erbottlewat").
  */
 
 const stringRotation = function(str1, str2) {
-    if (str2.isSubstring(str1 + str1)) {
+    if ((str1 + str1).includes(str2)) {
         return true
     }
     return false
@@ -13,4 +13,5 @@ const stringRotation = function(str1, str2) {
 
 // Look for logic! This question is so easy if you just fully understand what a rotation really is,
 
-console.log(stringRotation())
+console.log(stringRotation('abcde', 'cdeab'));
+console.log(stringRotation('abcde', 'abdce'));
