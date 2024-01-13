@@ -21,6 +21,7 @@ const zeroMatrix = function(matrix) {
         zeroColumn(matrix, col);
     }
     
+    return matrix
 };
 
 const zeroRow = function(matrix, row) {
@@ -34,3 +35,6 @@ const zeroColumn = function(matrix, column) {
         matrix[r][column] = 0;
     }
 }
+
+console.log(zeroMatrix([[1, 1, 1], [0, 0, 0], [1, 1, 1], [1, 1, 1]]));
+console.log(zeroMatrix([[1, 0, 1], [1, 1, 1], [1, 1, 1], [0, 1, 1]]));
