@@ -22,3 +22,19 @@ var getIntersectionNode = function(headA, headB) {
     return null
     
 };
+
+const getListLength = (node) => {
+    let length = 0;
+    while (node) {
+        length++;
+        node = node.next;
+    }
+    return length
+}
+
+const moveForward = (node, length) => {
+    for (let i = 0; i < length; i++) {
+        node = node.next;
+    }
+    return node
+}
